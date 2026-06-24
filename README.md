@@ -63,21 +63,18 @@
   <img src="https://img.shields.io/badge/Impacto-Educación_&_datos-000?style=for-the-badge" />
 </p>
 
-### Repositorios
+### Repositorio destacado
 
 <p align="center">
-  <a href="https://github.com/Catussi/ELVIR">
-    <img height="170" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=ELVIR&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d" alt="ELVIR" />
-  </a>
-  <a href="https://github.com/Catussi/catus-daedalos">
-    <img height="170" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=catus-daedalos&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,ffc64d,52fa5a,4dfcff" alt="catus-daedalos" />
+  <a href="https://github.com/Catussi/ELVIR-Demo">
+    <img height="180" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=ELVIR-Demo&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d" alt="ELVIR-Demo" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Catussi/mi-website">
-    <img height="170" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=mi-website&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,4dfcff,c64dff,ea6161" alt="mi-website" />
-  </a>
+  <a href="https://github.com/Catussi/ELVIR-Demo"><img src="https://img.shields.io/badge/🤖_ELVIR--Demo-Repositorio-000?style=for-the-badge&logo=github" /></a>
+  <a href="https://elvir-demo.vercel.app/"><img src="https://img.shields.io/badge/🌐_Demo_en_vivo-elvir--demo.vercel.app-000?style=for-the-badge" /></a>
+  <a href="https://catussystems.dev/"><img src="https://img.shields.io/badge/🖥️_Portafolio-@Catussi-000?style=for-the-badge" /></a>
 </p>
 
 <br />
@@ -88,13 +85,15 @@
 <tr>
 <td width="50%" valign="top">
 
-**ELVIR** · *donde construyo hoy*
+**ELVIR-Demo** · *donde construyo hoy*
 
 <img src="https://img.shields.io/badge/Angular-000?logo=angular&logoColor=white" />
 <img src="https://img.shields.io/badge/FastAPI-000?logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/PostgreSQL-000?logo=postgresql&logoColor=white" />
 <img src="https://img.shields.io/badge/Docker-000?logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/IA-LiveAvatar-000" />
+
+[Repositorio](https://github.com/Catussi/ELVIR-Demo) · [Demo](https://elvir-demo.vercel.app/)
 
 Simulaciones laborales con IA para entrenamiento en entrevistas — accesibilidad, empleabilidad y seguimiento multirol en salud y bienestar.
 
@@ -214,7 +213,7 @@ Hardware + nube: sensores, MQTT y alertas en tiempo real.
 <img src="https://img.shields.io/badge/FastAPI-000?logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/PostgreSQL-000?logo=postgresql&logoColor=white" />
 
-Construyendo ELVIR: simulaciones laborales con IA, arquitectura end-to-end y entornos reproducibles.
+Construyendo [ELVIR-Demo](https://github.com/Catussi/ELVIR-Demo): simulaciones laborales con IA, arquitectura end-to-end y entornos reproducibles.
 
 </td>
 </tr>
