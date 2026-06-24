@@ -1,21 +1,18 @@
 <!-- @Catussi · GitHub Profile README -->
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ea6161,35:ffc64d,70:52fa5a,100:4dfcff&height=110&section=header&text=Catussi&fontSize=42&fontColor=000&animation=twinkling" alt="Catussi" />
-</p>
+<!-- Banner = GIF del portafolio. Clic → catussystems.dev. Subir profile.gif a github.com/Catussi/Catussi -->
+[![](https://raw.githubusercontent.com/Catussi/Catussi/master/profile.gif)](https://catussystems.dev/)
 
 <h1 align="center">Catalina Barria Otto</h1>
+<h3 align="center">Full Stack Developer · Machine Learning Engineer</h3>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=000000&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;Machine+Learning+Engineer;@Catussi;Valpara%C3%ADso%2C+Chile" alt="Typing SVG" /></a>
+  <i>Ingeniería Civil Informática · @Catussi · Valparaíso, Chile</i>
 </p>
 
 <p align="center">
-  <i>Ingeniería Civil Informática · @Catussi</i>
-</p>
-
-<p align="center">
-  <a href="https://catussystems.dev/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-catussystems.dev-000?style=for-the-badge" /></a>
+  <a href="https://catussystems.dev/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-@Catussi-000?style=for-the-badge" /></a>
+  <a href="https://github.com/Catussi"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-@Catussi-000?style=for-the-badge&logo=github" /></a>
   <a href="https://www.linkedin.com/in/catalinabarriaotto/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-000?style=for-the-badge&logo=linkedin" /></a>
   <a href="mailto:cata.barria@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-cata.barria@gmail.com-000?style=for-the-badge&logo=gmail" /></a>
 </p>
@@ -269,4 +266,3 @@ Primeros pasos en tech con propósito — desarrollo web, Power BI y servicios e
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4dfcff,50:52fa5a,100:ffc64d&height=60&section=footer&text=%40Catussi&fontSize=22&fontColor=000" alt="Catussi footer" />
 </p>
 
-<!-- Banner (profile.gif): pendiente — generar desde catus-daedalos y subir a Catussi/Catussi -->
