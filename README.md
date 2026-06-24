@@ -12,125 +12,237 @@
 
 ## Sobre mí
 
-Desarrollo **plataformas web full stack** y **pipelines de machine learning aplicado**, con foco en productos que conectan arquitectura de software, datos e impacto real.
+> Desarrollo **plataformas web full stack** y **pipelines de machine learning aplicado**, con foco en productos que conectan arquitectura de software, datos e impacto real.
+>
+> **Angular · FastAPI · PostgreSQL** en sistemas multirol · **ML · XAI · analítica** en investigación y producto.
 
-Trabajo con **Angular, FastAPI y PostgreSQL** en sistemas multirol con APIs REST, autenticación JWT y trazabilidad. En paralelo, aplico **ML, XAI y analítica** en proyectos de investigación, clasificación, regresión y segmentación.
-
-**Dirección actual:** ingeniería de software, backend, arquitectura y ML aplicado a productos web.
+<p align="center">
+  <img src="https://img.shields.io/badge/Enfoque-Full_Stack-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Enfoque-Machine_Learning-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Enfoque-Backend_&_APIs-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Enfoque-Arquitectura_de_software-000?style=flat-square" />
+</p>
 
 ---
 
 ## Stack
 
-### Full stack
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,ts,js,angular,fastapi,nodejs,laravel,postgres,docker,git,linux,tensorflow,java,cpp,php,html,css" />
+</p>
 
-![Python](https://img.shields.io/badge/-Python-000?&logo=Python)
-![TypeScript](https://img.shields.io/badge/-TypeScript-000?&logo=TypeScript)
-![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript)
-![Angular](https://img.shields.io/badge/-Angular-000?&logo=Angular)
-![FastAPI](https://img.shields.io/badge/-FastAPI-000?&logo=FastAPI)
-![Node.js](https://img.shields.io/badge/-Node.js-000?&logo=node.js)
-![Laravel](https://img.shields.io/badge/-Laravel-000?&logo=Laravel)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-000?&logo=PostgreSQL)
-![Docker](https://img.shields.io/badge/-Docker-000?&logo=Docker)
-![Git](https://img.shields.io/badge/-Git-000?&logo=Git)
-![Linux](https://img.shields.io/badge/-Linux-000?&logo=Linux)
-
-### Machine learning
-
-![scikit-learn](https://img.shields.io/badge/-scikit--learn-000?&logo=scikit-learn)
-![TensorFlow](https://img.shields.io/badge/-TensorFlow-000?&logo=TensorFlow)
-![Pandas](https://img.shields.io/badge/-Pandas-000?&logo=pandas)
-![NumPy](https://img.shields.io/badge/-NumPy-000?&logo=numpy)
-![Jupyter](https://img.shields.io/badge/-Jupyter-000?&logo=Jupyter)
-![Power BI](https://img.shields.io/badge/-Power%20BI-000?&logo=powerbi)
-
-### Lenguajes
-
-![Java](https://img.shields.io/badge/-Java-000?&logo=OpenJDK)
-![C++](https://img.shields.io/badge/-C++-000?&logo=c%2b%2b&logoColor=00599C)
-![SQL](https://img.shields.io/badge/-SQL-000?&logo=PostgreSQL)
-![PHP](https://img.shields.io/badge/-PHP-000?&logo=PHP)
-![HTML5](https://img.shields.io/badge/-HTML5-000?&logo=HTML5)
-![CSS3](https://img.shields.io/badge/-CSS3-000?&logo=CSS3)
+<p align="center">
+  <img src="https://img.shields.io/badge/scikit--learn-000?logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-000?logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-000?logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jupyter-000?logo=jupyter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Power_BI-000?logo=powerbi&logoColor=white" />
+  <img src="https://img.shields.io/badge/SHAP-XAI-000" />
+  <img src="https://img.shields.io/badge/SQLAlchemy-ORM-000" />
+  <img src="https://img.shields.io/badge/JWT-RBAC-000" />
+</p>
 
 ---
 
 ## Proyectos destacados
 
-### ELVIR — Simulación laboral asistida por IA
+### Repositorios
 
-[![](https://img.shields.io/badge/-Ver%20repositorio-000)](https://github.com/Catussi/ELVIR)
+<p align="center">
+  <a href="https://github.com/Catussi/ELVIR">
+    <img height="170" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=ELVIR&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d" alt="ELVIR" />
+  </a>
+  <a href="https://github.com/Catussi/catus-daedalos">
+    <img height="170" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=catus-daedalos&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,ffc64d,52fa5a,4dfcff" alt="catus-daedalos" />
+  </a>
+</p>
 
-Plataforma full stack para entrenamiento en entrevistas y simulaciones laborales, con foco en accesibilidad y empleabilidad.
+<p align="center">
+  <a href="https://github.com/Catussi/mi-website">
+    <img height="170" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=mi-website&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,4dfcff,c64dff,ea6161" alt="mi-website" />
+  </a>
+</p>
 
-- Angular + FastAPI + PostgreSQL con arquitectura multirol (RBAC)
-- APIs REST, JWT, orquestación de sesiones y seguimiento de simulaciones
-- Integración con avatar conversacional e IA externa (LiveAvatar)
-- SQLAlchemy, Alembic, Docker Compose y documentación de arquitectura
+<br />
 
-### Academic Pathways — Tesis ML + XAI
+### Full stack & producto
 
-Investigación aplicada sobre trayectorias académicas y selección de macroáreas formativas.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-- Modelos supervisados sobre registros longitudinales de rendimiento escolar
-- Interpretabilidad con **SHAP** y análisis de equidad algorítmica en contexto educativo
-- Python · scikit-learn · analítica educativa
+**ELVIR** · Simulación laboral con IA
 
-### CatusSystems Desktop — Portafolio interactivo
+<img src="https://img.shields.io/badge/Angular-000?logo=angular&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-000?logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-000?logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-000?logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/IA-LiveAvatar-000" />
 
-[![](https://img.shields.io/badge/-Desktop%20OS-000)](https://github.com/Catussi/catus-daedalos)
-[![](https://img.shields.io/badge/-Website-000)](https://github.com/Catussi/mi-website)
+Plataforma para entrenamiento en entrevistas y simulaciones laborales — accesibilidad, empleabilidad y seguimiento por rol.
 
-Entorno de escritorio en el navegador (inspirado en daedalOS) que funciona como portafolio vivo: explorador de archivos, apps y documentación integrada.
+</td>
+<td width="50%" valign="top">
 
-### Más proyectos
+**CatusSystems Desktop** · Portafolio OS
 
-| Proyecto | Enfoque |
-| --- | --- |
-| **eSports Performance Analytics** | ML sobre 79k+ partidas CS:GO · clasificación, regresión, clustering |
-| **Concrete Strength Prediction** | Regresión con scikit-learn y redes neuronales · R² ~0.91 |
-| **Deep Learning Crack Detection** | CNN vs MLP para detección de fisuras en imágenes |
-| **Production Management System** | Angular 18 · inventario, turnos y dashboards operativos |
-| **Laravel Ecommerce** | MVC · catálogo, checkout, panel admin y procesamiento de imágenes |
-| **VRPTW Optimization** | Modelado y resolución con Gurobi / CPLEX |
-| **IoT Gas Monitoring** | ESP8266 · MQTT · ThingsBoard · alertas en tiempo real |
+<img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-000?logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/daedalOS-inspired-000" />
+
+Escritorio en el navegador con apps, archivos y documentación — un portafolio que se siente como un sistema operativo.
+
+</td>
+</tr>
+</table>
+
+<br />
+
+### Machine learning & investigación
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**Academic Pathways**
+
+<img src="https://img.shields.io/badge/Tesis-ML-000" />
+<img src="https://img.shields.io/badge/SHAP-XAI-000" />
+
+Trayectorias académicas y selección de macroáreas formativas con modelos interpretables.
+
+</td>
+<td width="33%" valign="top">
+
+**eSports Analytics**
+
+<img src="https://img.shields.io/badge/79k%2B-registros-000" />
+<img src="https://img.shields.io/badge/Random_Forest-F1_0.99-000" />
+
+Pipeline ML sobre partidas CS:GO — clasificación, regresión y clustering.
+
+</td>
+<td width="33%" valign="top">
+
+**Concrete Strength**
+
+<img src="https://img.shields.io/badge/Regresión-R²_0.91-000" />
+<img src="https://img.shields.io/badge/Keras_Tuner-000" />
+
+Predicción de resistencia del hormigón con scikit-learn y redes neuronales.
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Crack Detection**
+
+<img src="https://img.shields.io/badge/CNN-TensorFlow-000" />
+<img src="https://img.shields.io/badge/Visión-000" />
+
+Detección automática de fisuras en superficies con deep learning.
+
+</td>
+<td valign="top">
+
+**VRPTW Optimization**
+
+<img src="https://img.shields.io/badge/Gurobi-000" />
+<img src="https://img.shields.io/badge/CPLEX-000" />
+
+Ruteo de vehículos con ventanas de tiempo y restricciones de capacidad.
+
+</td>
+<td valign="top">
+
+**IoT Gas Monitoring**
+
+<img src="https://img.shields.io/badge/ESP8266-000" />
+<img src="https://img.shields.io/badge/MQTT-000" />
+
+Monitoreo de gas en tiempo real con alertas vía ThingsBoard.
+
+</td>
+</tr>
+</table>
+
+<br />
+
+<details>
+<summary><b>Ver más proyectos</b></summary>
+<br />
+
+| | Proyecto | Stack | Highlight |
+| :---: | --- | --- | --- |
+| 🏭 | **Production Management** | Angular 18 · Material | Inventario, turnos y dashboards operativos |
+| 🛒 | **Laravel Ecommerce** | Laravel · MySQL | Catálogo, checkout, admin y thumbnails automáticos |
+| 📊 | **ACHIYA dashboards** | Power BI · Web | Visualización y servicios web institucionales |
+
+</details>
 
 ---
 
 ## Experiencia
 
+<table>
+<tr>
+<td width="140"><img src="https://img.shields.io/badge/2026-Presente-000?style=for-the-badge" /></td>
+<td>
+
 **Full Stack Developer** · Instituto de Tecnología para la Innovación en Salud y Bienestar  
-*Ene 2026 – Presente · Viña del Mar*
+*Viña del Mar, Chile*
 
-Desarrollo de plataforma web para simulaciones laborales con IA. Arquitectura end-to-end, APIs, modelo relacional, integraciones externas y entornos reproducibles con Docker.
+<img src="https://img.shields.io/badge/Angular-000?logo=angular&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-000?logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-000?logo=postgresql&logoColor=white" />
 
-**Digital Assistant** · Universidad Adolfo Ibáñez  
-*May 2024 – Sep 2024 · Remoto*
+Plataforma de simulaciones laborales con IA · arquitectura end-to-end · APIs · Docker
 
-Landing pages institucionales, hosting, SSL y contenido digital para iniciativas de IA y tecnología.
+</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2024-000?style=for-the-badge" /></td>
+<td>
 
-**Web Development Internship** · Asociación Chilena de Mujeres en IA  
-*Abr 2022 – Ago 2022*
+**Digital Assistant** · Universidad Adolfo Ibáñez · *Remoto*
 
-Desarrollo web, dashboards en Power BI y administración de servicios.
+Landing pages, hosting, SSL y contenido digital para iniciativas de IA y tecnología.
+
+</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/2022-000?style=for-the-badge" /></td>
+<td>
+
+**Web Development Intern** · Asociación Chilena de Mujeres en IA
+
+Desarrollo web, dashboards Power BI y administración de servicios.
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## Formación
 
-**Ingeniería Civil Informática** · Universidad Andrés Bello · 2020 – 2025  
-Tesis en ML aplicado a trayectorias académicas con modelos interpretables.
+<p align="center">
+  <img src="https://img.shields.io/badge/Ingeniería_Civil_Informática-Universidad_Andrés_Bello-000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/IBM_Data_Science_Professional_Certificate-2025-000?style=for-the-badge&logo=ibm" />
+</p>
 
-**IBM Data Science Professional Certificate** · IBM / Coursera · 2025
+<p align="center"><i>Tesis en ML aplicado a trayectorias académicas · modelos interpretables · XAI</i></p>
 
 ---
 
 ## GitHub
 
-<a href="https://github.com/Catussi">
-  <img height="160px" src="https://github-readme-stats.vercel.app/api?username=Catussi&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
-  <img height="160px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Catussi&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" />
-</a>
+<p align="center">
+  <a href="https://github.com/Catussi">
+    <img height="160" src="https://github-readme-stats.vercel.app/api?username=Catussi&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
+    <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Catussi&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" />
+  </a>
+</p>
 
 <!-- Banner (profile.gif): pendiente — generar desde catus-daedalos y subir a Catussi/Catussi -->
