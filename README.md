@@ -1,6 +1,18 @@
+<!-- @Catussi · GitHub Profile README -->
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ea6161,35:ffc64d,70:52fa5a,100:4dfcff&height=110&section=header&text=Catussi&fontSize=42&fontColor=000&animation=twinkling" alt="Catussi" />
+</p>
+
 <h1 align="center">Catalina Barria Otto</h1>
-<h3 align="center">Full Stack Developer · Machine Learning Engineer</h3>
-<p align="center">Ingeniería Civil Informática · Valparaíso, Chile</p>
+
+<p align="center">
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1200&color=000000&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;Machine+Learning+Engineer;@Catussi;Valpara%C3%ADso%2C+Chile" alt="Typing SVG" /></a>
+</p>
+
+<p align="center">
+  <i>Ingeniería Civil Informática · @Catussi</i>
+</p>
 
 <p align="center">
   <a href="https://catussystems.dev/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-catussystems.dev-000?style=for-the-badge" /></a>
@@ -12,16 +24,18 @@
 
 ## Sobre mí
 
-> Desarrollo **plataformas web full stack** y **pipelines de machine learning aplicado**, con foco en productos que conectan arquitectura de software, datos e impacto real.
+> No solo escribo código — **convierto ideas en sistemas que funcionan**: APIs, arquitectura, datos y producto en un mismo flujo.
 >
-> **Angular · FastAPI · PostgreSQL** en sistemas multirol · **ML · XAI · analítica** en investigación y producto.
+> Soy **desarrolladora full stack** y **ML engineer** desde Valparaíso. Me mueve construir plataformas web modernas donde la tecnología tenga impacto real: salud, empleabilidad, educación y accesibilidad.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Enfoque-Full_Stack-000?style=flat-square" />
-  <img src="https://img.shields.io/badge/Enfoque-Machine_Learning-000?style=flat-square" />
-  <img src="https://img.shields.io/badge/Enfoque-Backend_&_APIs-000?style=flat-square" />
-  <img src="https://img.shields.io/badge/Enfoque-Arquitectura_de_software-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Mi_sello-Producto_end--to--end-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Mi_sello-Backend_&_arquitectura-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Mi_sello-ML_interpretable_(XAI)-000?style=flat-square" />
+  <img src="https://img.shields.io/badge/Mi_sello-Software_con_trazabilidad-000?style=flat-square" />
 </p>
+
+**@Catussi** es cómo firmo mi trabajo: un portafolio que no es una landing estática, sino un **escritorio en el navegador** — porque creo que cómo presento lo que hago también cuenta.
 
 ---
 
@@ -45,6 +59,12 @@
 ---
 
 ## Proyectos destacados
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Impacto-Salud_&_bienestar-000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Impacto-Empleabilidad_&_accesibilidad-000?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Impacto-Educación_&_datos-000?style=for-the-badge" />
+</p>
 
 ### Repositorios
 
@@ -71,7 +91,7 @@
 <tr>
 <td width="50%" valign="top">
 
-**ELVIR** · Simulación laboral con IA
+**ELVIR** · *donde construyo hoy*
 
 <img src="https://img.shields.io/badge/Angular-000?logo=angular&logoColor=white" />
 <img src="https://img.shields.io/badge/FastAPI-000?logo=fastapi&logoColor=white" />
@@ -79,18 +99,18 @@
 <img src="https://img.shields.io/badge/Docker-000?logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/IA-LiveAvatar-000" />
 
-Plataforma para entrenamiento en entrevistas y simulaciones laborales — accesibilidad, empleabilidad y seguimiento por rol.
+Simulaciones laborales con IA para entrenamiento en entrevistas — accesibilidad, empleabilidad y seguimiento multirol en salud y bienestar.
 
 </td>
 <td width="50%" valign="top">
 
-**CatusSystems Desktop** · Portafolio OS
+**Catussi Desktop** · *mi carta de presentación*
 
 <img src="https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/TypeScript-000?logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/daedalOS-inspired-000" />
 
-Escritorio en el navegador con apps, archivos y documentación — un portafolio que se siente como un sistema operativo.
+Mi portafolio es un SO en el navegador: apps, archivos y CV integrados. Software como experiencia, no como PDF.
 
 </td>
 </tr>
@@ -104,12 +124,12 @@ Escritorio en el navegador con apps, archivos y documentación — un portafolio
 <tr>
 <td width="33%" valign="top">
 
-**Academic Pathways**
+**Academic Pathways** · *mi tesis*
 
 <img src="https://img.shields.io/badge/Tesis-ML-000" />
 <img src="https://img.shields.io/badge/SHAP-XAI-000" />
 
-Trayectorias académicas y selección de macroáreas formativas con modelos interpretables.
+Trayectorias escolares y equidad algorítmica — ML que se puede explicar, no solo predecir.
 
 </td>
 <td width="33%" valign="top">
@@ -119,7 +139,7 @@ Trayectorias académicas y selección de macroáreas formativas con modelos inte
 <img src="https://img.shields.io/badge/79k%2B-registros-000" />
 <img src="https://img.shields.io/badge/Random_Forest-F1_0.99-000" />
 
-Pipeline ML sobre partidas CS:GO — clasificación, regresión y clustering.
+Pipeline ML sobre partidas CS:GO — clasificación, regresión y clustering a escala.
 
 </td>
 <td width="33%" valign="top">
@@ -129,7 +149,7 @@ Pipeline ML sobre partidas CS:GO — clasificación, regresión y clustering.
 <img src="https://img.shields.io/badge/Regresión-R²_0.91-000" />
 <img src="https://img.shields.io/badge/Keras_Tuner-000" />
 
-Predicción de resistencia del hormigón con scikit-learn y redes neuronales.
+Ingeniería + datos: predecir resistencia del hormigón con modelos comparados y tuning.
 
 </td>
 </tr>
@@ -141,7 +161,7 @@ Predicción de resistencia del hormigón con scikit-learn y redes neuronales.
 <img src="https://img.shields.io/badge/CNN-TensorFlow-000" />
 <img src="https://img.shields.io/badge/Visión-000" />
 
-Detección automática de fisuras en superficies con deep learning.
+Visión por computador aplicada — CNN vs MLP para detección de fisuras.
 
 </td>
 <td valign="top">
@@ -151,7 +171,7 @@ Detección automática de fisuras en superficies con deep learning.
 <img src="https://img.shields.io/badge/Gurobi-000" />
 <img src="https://img.shields.io/badge/CPLEX-000" />
 
-Ruteo de vehículos con ventanas de tiempo y restricciones de capacidad.
+Optimización combinatoria para logística con restricciones reales.
 
 </td>
 <td valign="top">
@@ -161,7 +181,7 @@ Ruteo de vehículos con ventanas de tiempo y restricciones de capacidad.
 <img src="https://img.shields.io/badge/ESP8266-000" />
 <img src="https://img.shields.io/badge/MQTT-000" />
 
-Monitoreo de gas en tiempo real con alertas vía ThingsBoard.
+Hardware + nube: sensores, MQTT y alertas en tiempo real.
 
 </td>
 </tr>
@@ -177,7 +197,7 @@ Monitoreo de gas en tiempo real con alertas vía ThingsBoard.
 | :---: | --- | --- | --- |
 | 🏭 | **Production Management** | Angular 18 · Material | Inventario, turnos y dashboards operativos |
 | 🛒 | **Laravel Ecommerce** | Laravel · MySQL | Catálogo, checkout, admin y thumbnails automáticos |
-| 📊 | **ACHIYA dashboards** | Power BI · Web | Visualización y servicios web institucionales |
+| 📊 | **ACHIYA dashboards** | Power BI · Web | Mujeres en IA — visualización y servicios web |
 
 </details>
 
@@ -197,7 +217,7 @@ Monitoreo de gas en tiempo real con alertas vía ThingsBoard.
 <img src="https://img.shields.io/badge/FastAPI-000?logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/PostgreSQL-000?logo=postgresql&logoColor=white" />
 
-Plataforma de simulaciones laborales con IA · arquitectura end-to-end · APIs · Docker
+Construyendo ELVIR: simulaciones laborales con IA, arquitectura end-to-end y entornos reproducibles.
 
 </td>
 </tr>
@@ -207,7 +227,7 @@ Plataforma de simulaciones laborales con IA · arquitectura end-to-end · APIs �
 
 **Digital Assistant** · Universidad Adolfo Ibáñez · *Remoto*
 
-Landing pages, hosting, SSL y contenido digital para iniciativas de IA y tecnología.
+Comunicación de ciencia e IA — landing pages, hosting, SSL y contenido digital institucional.
 
 </td>
 </tr>
@@ -217,7 +237,7 @@ Landing pages, hosting, SSL y contenido digital para iniciativas de IA y tecnolo
 
 **Web Development Intern** · Asociación Chilena de Mujeres en IA
 
-Desarrollo web, dashboards Power BI y administración de servicios.
+Primeros pasos en tech con propósito — desarrollo web, Power BI y servicios en la comunidad.
 
 </td>
 </tr>
@@ -232,7 +252,7 @@ Desarrollo web, dashboards Power BI y administración de servicios.
   <img src="https://img.shields.io/badge/IBM_Data_Science_Professional_Certificate-2025-000?style=for-the-badge&logo=ibm" />
 </p>
 
-<p align="center"><i>Tesis en ML aplicado a trayectorias académicas · modelos interpretables · XAI</i></p>
+<p align="center"><i>Tesis en ML + trayectorias académicas · SHAP · equidad algorítmica en educación</i></p>
 
 ---
 
@@ -243,6 +263,10 @@ Desarrollo web, dashboards Power BI y administración de servicios.
     <img height="160" src="https://github-readme-stats.vercel.app/api?username=Catussi&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" />
     <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Catussi&hide=html&hide_title=true&hide_border=true&layout=compact&langs_count=6&text_color=000&icon_color=fff&bg_color=0,52fa5a,4dfcff,c64dff&theme=graywhite" />
   </a>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4dfcff,50:52fa5a,100:ffc64d&height=60&section=footer&text=%40Catussi&fontSize=22&fontColor=000" alt="Catussi footer" />
 </p>
 
 <!-- Banner (profile.gif): pendiente — generar desde catus-daedalos y subir a Catussi/Catussi -->
