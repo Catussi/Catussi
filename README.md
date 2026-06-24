@@ -75,10 +75,19 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Catussi/ELVIR-Demo"><img src="https://img.shields.io/badge/🤖_ELVIR--Demo-Repositorio-000?style=for-the-badge&logo=github" /></a>
-  <a href="https://elvir-demo.vercel.app/"><img src="https://img.shields.io/badge/🌐_Demo-ELVIR-000?style=for-the-badge" /></a>
-  <a href="https://github.com/Catussi/catussi-os"><img src="https://img.shields.io/badge/🖥️_catussi--os-Repositorio-000?style=for-the-badge&logo=github" /></a>
-  <a href="https://catussi.dev/"><img src="https://img.shields.io/badge/🌐_Live-catussi.dev-000?style=for-the-badge" /></a>
+  <a href="https://github.com/Catussi/Production-Management-System-Angular-Enterprise-Application">
+    <img height="180" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=Production-Management-System-Angular-Enterprise-Application&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,52fa5a,4dfcff,c64dff" alt="Production Management" />
+  </a>
+  <a href="https://github.com/Catussi/Machine-Learning-Analysis-of-Player-Performance-in-CS-GO">
+    <img height="180" src="https://github-readme-stats.vercel.app/api/pin/?username=Catussi&repo=Machine-Learning-Analysis-of-Player-Performance-in-CS-GO&hide_border=true&title_color=000&text_color=000&icon_color=000&bg_color=0,4dfcff,c64dff,ea6161" alt="CS:GO ML" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Catussi/ELVIR-Demo"><img src="https://img.shields.io/badge/ELVIR--Demo-repo-000?style=for-the-badge&logo=github" /></a>
+  <a href="https://elvir-demo.vercel.app/"><img src="https://img.shields.io/badge/ELVIR-demo-000?style=for-the-badge" /></a>
+  <a href="https://github.com/Catussi/catussi-os"><img src="https://img.shields.io/badge/catussi--os-repo-000?style=for-the-badge&logo=github" /></a>
+  <a href="https://catussi.dev/"><img src="https://img.shields.io/badge/catussi.dev-live-000?style=for-the-badge" /></a>
 </p>
 
 <br />
@@ -112,7 +121,29 @@ Simulaciones laborales con IA para entrenamiento en entrevistas — accesibilida
 
 [Repositorio](https://github.com/Catussi/catussi-os) · [catussi.dev](https://catussi.dev/)
 
-Portafolio como SO en el navegador: apps, archivos y CV integrados. Software como experiencia, no como PDF.
+Portafolio como SO en el navegador: apps, archivos y CV integrados.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[Production Management](https://github.com/Catussi/Production-Management-System-Angular-Enterprise-Application)** · *Angular enterprise*
+
+<img src="https://img.shields.io/badge/Angular_18-000?logo=angular&logoColor=white" />
+<img src="https://img.shields.io/badge/Material-000" />
+
+Inventario, turnos y dashboards operativos.
+
+</td>
+<td width="50%" valign="top">
+
+**[Laravel Commerce](https://github.com/Catussi/Laravel-Commerce)** · *e-commerce full stack*
+
+<img src="https://img.shields.io/badge/Laravel-000?logo=laravel&logoColor=white" />
+<img src="https://img.shields.io/badge/MySQL-000?logo=mysql&logoColor=white" />
+
+Catálogo, checkout, panel admin y procesamiento automático de imágenes.
 
 </td>
 </tr>
@@ -130,13 +161,14 @@ Portafolio como SO en el navegador: apps, archivos y CV integrados. Software com
 
 <img src="https://img.shields.io/badge/Tesis-ML-000" />
 <img src="https://img.shields.io/badge/SHAP-XAI-000" />
+<img src="https://img.shields.io/badge/sin_repo_público-000" />
 
 Trayectorias escolares y equidad algorítmica — ML que se puede explicar, no solo predecir.
 
 </td>
 <td width="33%" valign="top">
 
-**eSports Analytics**
+**[eSports Analytics](https://github.com/Catussi/Machine-Learning-Analysis-of-Player-Performance-in-CS-GO)**
 
 <img src="https://img.shields.io/badge/79k%2B-registros-000" />
 <img src="https://img.shields.io/badge/Random_Forest-F1_0.99-000" />
@@ -146,7 +178,7 @@ Pipeline ML sobre partidas CS:GO — clasificación, regresión y clustering a e
 </td>
 <td width="33%" valign="top">
 
-**Concrete Strength**
+**[Concrete Strength](https://github.com/Catussi/Concrete-Strength-Prediction-with-Machine-Learning)**
 
 <img src="https://img.shields.io/badge/Regresión-R²_0.91-000" />
 <img src="https://img.shields.io/badge/Keras_Tuner-000" />
@@ -158,7 +190,7 @@ Ingeniería + datos: predecir resistencia del hormigón con modelos comparados y
 <tr>
 <td valign="top">
 
-**Crack Detection**
+**[Crack Detection](https://github.com/Catussi/Academic-Projects/tree/main/Machine%20Learning)**
 
 <img src="https://img.shields.io/badge/CNN-TensorFlow-000" />
 <img src="https://img.shields.io/badge/Visión-000" />
@@ -168,7 +200,7 @@ Visión por computador aplicada — CNN vs MLP para detección de fisuras.
 </td>
 <td valign="top">
 
-**VRPTW Optimization**
+**[VRPTW Optimization](https://github.com/Catussi/Academic-Projects/tree/main/Optimization)**
 
 <img src="https://img.shields.io/badge/Gurobi-000" />
 <img src="https://img.shields.io/badge/CPLEX-000" />
@@ -178,7 +210,7 @@ Optimización combinatoria para logística con restricciones reales.
 </td>
 <td valign="top">
 
-**IoT Gas Monitoring**
+**[IoT Gas Monitoring](https://github.com/Catussi/Academic-Projects/tree/main/Internet%20Of%20Things)**
 
 <img src="https://img.shields.io/badge/ESP8266-000" />
 <img src="https://img.shields.io/badge/MQTT-000" />
@@ -192,14 +224,17 @@ Hardware + nube: sensores, MQTT y alertas en tiempo real.
 <br />
 
 <details>
-<summary><b>Ver más proyectos</b></summary>
+<summary><b>Ver todos en GitHub</b></summary>
 <br />
 
-| | Proyecto | Stack | Highlight |
+| | Proyecto | Repo | Highlight |
 | :---: | --- | --- | --- |
-| 🏭 | **Production Management** | Angular 18 · Material | Inventario, turnos y dashboards operativos |
-| 🛒 | **Laravel Ecommerce** | Laravel · MySQL | Catálogo, checkout, admin y thumbnails automáticos |
-| 📊 | **ACHIYA dashboards** | Power BI · Web | Mujeres en IA — visualización y servicios web |
+| 🏭 | **Production Management** | [Angular Enterprise App](https://github.com/Catussi/Production-Management-System-Angular-Enterprise-Application) | Inventario, turnos y dashboards operativos |
+| 🛒 | **Laravel Commerce** | [Laravel-Commerce](https://github.com/Catussi/Laravel-Commerce) | Catálogo, checkout, admin y thumbnails automáticos |
+| 🎮 | **eSports Platform** | [esports-analytics-platform](https://github.com/Catussi/esports-analytics-platform) | Plataforma de analítica eSports |
+| 📓 | **IBM Capstone** | [DataScience-Capstone](https://github.com/Catussi/DataScience-Capstone) | Proyecto capstone de data science |
+| 📚 | **Proyectos académicos** | [Academic-Projects](https://github.com/Catussi/Academic-Projects) | ML, optimización e IoT universitarios |
+| 📊 | **ACHIYA dashboards** | *experiencia · sin repo* | Mujeres en IA — Power BI y desarrollo web |
 
 </details>
 
