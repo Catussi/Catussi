@@ -1,9 +1,11 @@
 /**
- * Banner = solo escritorio catussi-os (wallpaper animado + iconos, sin ventanas).
- * Clic en el README → catussi.dev
+ * Banner = solo escritorio catussi-os (wallpaper + iconos, sin ventanas).
+ * Captura vía CDP screencast para acercarse a 60 fps reales.
  *
  *   cd catussi-os && npm run build && npx serve out -l 3010
  *   cd mi-perfil-github && npm run generate:desktop
+ *
+ * Env: BANNER_FPS=60 BANNER_SECONDS=1.5 PROFILE_URL=http://localhost:3010
  */
 
 import { chromium } from "playwright";
@@ -18,17 +20,18 @@ const { GIFEncoder, quantize, applyPalette } = gifenc;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT = resolve(__dirname, "..", "profile.gif");
 
-const VIEWPORT_W = 1280;
-const VIEWPORT_H = 400;
-const BANNER_W = 1280;
-const BANNER_H = 400;
+const FPS = Number(process.env.BANNER_FPS) || 60;
+const SECONDS = Number(process.env.BANNER_SECONDS) || 1.5;
+const TARGET_FRAMES = Math.round(FPS * SECONDS);
+const FRAME_DELAY_MS = 1000 / FPS;
 
-const FPS = 18;
-const FRAME_DELAY_MS = Math.round(1000 / FPS);
-const SECONDS = 2.4;
-const FRAMES = Math.round(FPS * SECONDS);
-const PALETTE_SIZE = 80;
-const PALETTE_SAMPLE_FRAMES = 10;
+const VIEWPORT_W = 1152;
+const VIEWPORT_H = 360;
+const BANNER_W = 1152;
+const BANNER_H = 360;
+
+const PALETTE_SIZE = 96;
+const PALETTE_SAMPLE_FRAMES = 12;
 
 const DESKTOP_SELECTOR = "body>#__next>main";
 const WALLPAPER_CANVAS = `${DESKTOP_SELECTOR}>canvas`;
@@ -77,12 +80,13 @@ const buildPalette = (frames) => {
 const encodeGif = (frames) => {
   const gif = GIFEncoder();
   const palette = buildPalette(frames);
+  const delayMs = Math.max(1, Math.round(FRAME_DELAY_MS));
 
   frames.forEach((frame) => {
     const indexed = applyPalette(new Uint8Array(frame.data), palette);
     gif.writeFrame(indexed, frame.width, frame.height, {
       palette,
-      delay: FRAME_DELAY_MS,
+      delay: delayMs,
       dispose: 1,
     });
   });
@@ -91,16 +95,71 @@ const encodeGif = (frames) => {
   return Buffer.from(gif.bytes());
 };
 
-const waitForNextFrame = async (frameIndex, start) => {
-  const target = start + (frameIndex + 1) * FRAME_DELAY_MS;
-  const wait = target - Date.now();
+const pickEvenly = (buffers, count) => {
+  if (buffers.length <= count) return buffers;
 
-  if (wait > 0) await sleep(wait);
+  const picked = [];
+  const step = (buffers.length - 1) / (count - 1);
+
+  for (let i = 0; i < count; i += 1) {
+    picked.push(buffers[Math.round(i * step)]);
+  }
+
+  return picked;
 };
+
+const captureScreencast = async (page, durationMs) =>
+  new Promise((resolve, reject) => {
+    const buffers = [];
+    let client;
+    let timeoutId;
+
+    const finish = async () => {
+      clearTimeout(timeoutId);
+      try {
+        await client?.send("Page.stopScreencast");
+      } catch {
+        // already stopped
+      }
+      client?.removeAllListeners();
+      resolve(buffers);
+    };
+
+    page
+      .context()
+      .newCDPSession(page)
+      .then(async (cdp) => {
+        client = cdp;
+
+        client.on("Page.screencastFrame", async ({ data, sessionId }) => {
+          buffers.push(Buffer.from(data, "base64"));
+          try {
+            await client.send("Page.screencastFrameAck", { sessionId });
+          } catch {
+            // ignore
+          }
+        });
+
+        await client.send("Page.startScreencast", {
+          format: "jpeg",
+          quality: 85,
+          maxWidth: VIEWPORT_W,
+          maxHeight: VIEWPORT_H,
+          everyNthFrame: 1,
+        });
+
+        timeoutId = setTimeout(() => {
+          finish().catch(reject);
+        }, durationMs);
+      })
+      .catch(reject);
+  });
 
 const main = async () => {
   const url = await resolveProfileUrl();
-  console.log(`Capturando escritorio (sin ventanas) → ${OUTPUT}`);
+  console.log(
+    `Capturando escritorio ~${FPS}fps · ${SECONDS}s (objetivo ${TARGET_FRAMES}f) → ${OUTPUT}`
+  );
 
   const browser = await chromium.launch({
     headless: true,
@@ -121,19 +180,24 @@ const main = async () => {
     await page.waitForSelector(DESKTOP_ENTRIES, { timeout: 60_000 });
     await sleep(5000);
 
-    const desktop = page.locator(DESKTOP_SELECTOR);
-    const frames = [];
-    const start = Date.now();
+    const captureMs = Math.round(SECONDS * 1000);
+    const start = performance.now();
+    const rawBuffers = await captureScreencast(page, captureMs);
+    const elapsed = (performance.now() - start) / 1000;
+    const captureFps = rawBuffers.length / elapsed;
 
-    for (let i = 0; i < FRAMES; i += 1) {
-      frames.push(await processFrame(await desktop.screenshot({ type: "png" })));
-      await waitForNextFrame(i, start);
+    const selected = pickEvenly(rawBuffers, TARGET_FRAMES);
+    const frames = [];
+
+    for (const buffer of selected) {
+      frames.push(await processFrame(buffer));
     }
 
     const gif = encodeGif(frames);
     writeFileSync(OUTPUT, gif);
+
     console.log(
-      `Listo: ${OUTPUT} (${FRAMES}f @ ${FPS}fps, ${(gif.length / 1024 / 1024).toFixed(2)} MB)`
+      `Listo: ${OUTPUT} (${frames.length}f @ ${FPS}fps playback, ${rawBuffers.length} capturados en ${elapsed.toFixed(2)}s ~${captureFps.toFixed(1)}fps, ${(gif.length / 1024 / 1024).toFixed(2)} MB)`
     );
   } finally {
     await browser.close();
