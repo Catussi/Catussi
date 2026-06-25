@@ -1,7 +1,7 @@
 <!-- @Catussi · GitHub Profile README -->
 
-<!-- Banner = escritorio catussi-os (captura real). Clic → catussi.dev -->
-[![](https://raw.githubusercontent.com/Catussi/Catussi/main/profile.gif)](https://catussi.dev/)
+<!-- Banner = escritorio catussi-os (captura real). Clic → catussi-os.vercel.app -->
+[![](https://raw.githubusercontent.com/Catussi/Catussi/main/profile.gif)](https://catussi-os.vercel.app/)
 
 <h1 align="center">Catalina Barria Otto</h1>
 <h3 align="center">Full Stack Developer · Machine Learning Engineer</h3>
@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://catussi.dev/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-catussi.dev-000?style=for-the-badge" /></a>
+  <a href="https://catussi-os.vercel.app/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-catussi--os.vercel.app-000?style=for-the-badge" /></a>
   <a href="https://github.com/Catussi"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-@Catussi-000?style=for-the-badge&logo=github" /></a>
   <a href="https://www.linkedin.com/in/catalinabarriaotto/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-000?style=for-the-badge&logo=linkedin" /></a>
   <a href="mailto:cata.barria@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-cata.barria@gmail.com-000?style=for-the-badge&logo=gmail" /></a>
@@ -32,7 +32,7 @@
   <img src="https://img.shields.io/badge/Mi_sello-Software_con_trazabilidad-000?style=flat-square" />
 </p>
 
-**@Catussi** es cómo firmo mi trabajo: **[catussi-os](https://github.com/Catussi/catussi-os)** — un portafolio en **[catussi.dev](https://catussi.dev/)** que no es una landing estática, sino un **escritorio en el navegador**.
+**@Catussi** es cómo firmo mi trabajo: **[catussi-os](https://github.com/Catussi/catussi-os)** — un portafolio en **[catussi-os.vercel.app](https://catussi-os.vercel.app/)** que no es una landing estática, sino un **escritorio en el navegador**.
 
 ---
 
@@ -87,7 +87,7 @@
   <a href="https://github.com/Catussi/ELVIR-Demo"><img src="https://img.shields.io/badge/ELVIR--Demo-repo-000?style=for-the-badge&logo=github" /></a>
   <a href="https://elvir-demo.vercel.app/"><img src="https://img.shields.io/badge/ELVIR-demo-000?style=for-the-badge" /></a>
   <a href="https://github.com/Catussi/catussi-os"><img src="https://img.shields.io/badge/catussi--os-repo-000?style=for-the-badge&logo=github" /></a>
-  <a href="https://catussi.dev/"><img src="https://img.shields.io/badge/catussi.dev-live-000?style=for-the-badge" /></a>
+  <a href="https://catussi-os.vercel.app/"><img src="https://img.shields.io/badge/catussi--os-live-000?style=for-the-badge" /></a>
 </p>
 
 <br />
@@ -119,7 +119,7 @@ Simulaciones laborales con IA para entrenamiento en entrevistas — accesibilida
 <img src="https://img.shields.io/badge/TypeScript-000?logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/daedalOS-inspired-000" />
 
-[Repositorio](https://github.com/Catussi/catussi-os) · [catussi.dev](https://catussi.dev/)
+[Repositorio](https://github.com/Catussi/catussi-os) · [catussi-os.vercel.app](https://catussi-os.vercel.app/)
 
 Portafolio como SO en el navegador: apps, archivos y CV integrados.
 
