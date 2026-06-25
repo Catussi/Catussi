@@ -5,7 +5,7 @@
  *   cd catussi-os && npm run build && npx serve out -l 3010
  *   cd mi-perfil-github && npm run generate:desktop
  *
- * Env: BANNER_FPS=60 BANNER_SECONDS=1.5 PROFILE_URL=http://localhost:3010
+ * Env: BANNER_FPS=60 BANNER_SECONDS=3 PROFILE_URL=http://localhost:3010
  */
 
 import { chromium } from "playwright";
@@ -21,7 +21,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT = resolve(__dirname, "..", "profile.gif");
 
 const FPS = Number(process.env.BANNER_FPS) || 60;
-const SECONDS = Number(process.env.BANNER_SECONDS) || 1.5;
+const SECONDS = Number(process.env.BANNER_SECONDS) || 3;
 const TARGET_FRAMES = Math.round(FPS * SECONDS);
 const FRAME_DELAY_MS = 1000 / FPS;
 
@@ -175,7 +175,7 @@ const main = async () => {
   try {
     const page = await browser.newPage();
     await page.setViewportSize({ width: VIEWPORT_W, height: VIEWPORT_H });
-    await page.goto(url, { waitUntil: "networkidle", timeout: 120_000 });
+    await page.goto(url, { waitUntil: "load", timeout: 120_000 });
     await page.waitForSelector(WALLPAPER_CANVAS, { timeout: 120_000 });
     await page.waitForSelector(DESKTOP_ENTRIES, { timeout: 60_000 });
     await sleep(5000);
