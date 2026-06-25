@@ -5,7 +5,7 @@
  *   cd catussi-os && npm run build && npx serve out -l 3010
  *   cd mi-perfil-github && npm run generate:desktop
  *
- * Env: BANNER_FPS=60 BANNER_SECONDS=3 PROFILE_URL=http://localhost:3010
+ * Env: BANNER_FPS=30 BANNER_SECONDS=10 PROFILE_URL=http://localhost:3010
  */
 
 import { chromium } from "playwright";
@@ -20,8 +20,8 @@ const { GIFEncoder, quantize, applyPalette } = gifenc;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT = resolve(__dirname, "..", "profile.gif");
 
-const FPS = Number(process.env.BANNER_FPS) || 60;
-const SECONDS = Number(process.env.BANNER_SECONDS) || 3;
+const FPS = Number(process.env.BANNER_FPS) || 30;
+const SECONDS = Number(process.env.BANNER_SECONDS) || 10;
 const TARGET_FRAMES = Math.round(FPS * SECONDS);
 const FRAME_DELAY_MS = 1000 / FPS;
 
