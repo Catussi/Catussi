@@ -29,10 +29,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT = resolve(__dirname, "..", "profile.gif");
 
 const PLAYBACK_FPS = Number(process.env.BANNER_FPS) || 30;
-const CAPTURE_SECONDS = Number(process.env.BANNER_CAPTURE_SECONDS) || 10;
-const MIN_LOOP_SECONDS = Number(process.env.BANNER_MIN_LOOP_SECONDS) || 2.5;
-const MAX_LOOP_SECONDS = Number(process.env.BANNER_MAX_LOOP_SECONDS) || 3;
-const CROSSFADE_RATIO = Number(process.env.BANNER_CROSSFADE_RATIO) || 0.18;
+const CAPTURE_SECONDS = Number(process.env.BANNER_CAPTURE_SECONDS) || 12;
+const MIN_LOOP_SECONDS = Number(process.env.BANNER_MIN_LOOP_SECONDS) || 2;
+const MAX_LOOP_SECONDS = Number(process.env.BANNER_MAX_LOOP_SECONDS) || 4.5;
+const CROSSFADE_RATIO = Number(process.env.BANNER_CROSSFADE_RATIO) || 0.35;
+/** Periodos dominantes del shader Coastal (olas iTime*3, etc.) en segundos */
+const HARMONIC_LOOP_SECONDS = [2.094, 4.188, 3.142, 6.283];
 const DEVICE_SCALE = Number(process.env.BANNER_DPR) || 2;
 const PALETTE_SIZE = Number(process.env.BANNER_PALETTE) || 144;
 const JPEG_QUALITY = Number(process.env.BANNER_JPEG_QUALITY) || 92;
@@ -44,8 +46,8 @@ const VIEWPORT_H = 360;
 const BANNER_W = 1152;
 const BANNER_H = 360;
 
-const THUMB_W = 96;
-const THUMB_H = 30;
+const THUMB_W = 128;
+const THUMB_H = 40;
 const PALETTE_SAMPLE_FRAMES = 16;
 
 const DESKTOP_SELECTOR = "body>#__next>main";
@@ -95,10 +97,86 @@ const processFrame = async (buffer) => {
 
 const signatureDistance = (a, b) => {
   let sum = 0;
-  for (let i = 0; i < a.length; i += 1) {
-    sum += Math.abs(a[i] - b[i]);
+  for (let i = 0; i < a.length; i += 2) {
+    const d = a[i] - b[i];
+    sum += d * d;
   }
-  return sum / a.length;
+  return Math.sqrt(sum / (a.length / 2));
+};
+
+const loopScoreAt = (signatures, start, len) => {
+  const end = start + len;
+  if (end >= signatures.length) return Number.POSITIVE_INFINITY;
+
+  let score = signatureDistance(signatures[start], signatures[end]);
+  let weight = 1;
+
+  const checkpoints = [
+    Math.floor(len * 0.25),
+    Math.floor(len * 0.5),
+    Math.floor(len * 0.75),
+  ];
+
+  for (const offset of checkpoints) {
+    if (offset > 0 && start + offset + len < signatures.length) {
+      score += signatureDistance(
+        signatures[start + offset],
+        signatures[start + offset + len]
+      );
+      weight += 1;
+    }
+  }
+
+  // El último frame del ciclo debe fundirse con el primero
+  if (len > 1) {
+    score += signatureDistance(signatures[start + len - 1], signatures[start]) * 1.5;
+    weight += 1.5;
+  }
+
+  score /= weight;
+
+  const loopSeconds = len / PLAYBACK_FPS;
+  let harmonicPenalty = 1;
+  for (const period of HARMONIC_LOOP_SECONDS) {
+    const delta = Math.abs(loopSeconds - period);
+    if (delta < 0.12) {
+      harmonicPenalty = 0.55;
+      break;
+    }
+    if (delta < 0.25) {
+      harmonicPenalty = Math.min(harmonicPenalty, 0.75);
+    }
+  }
+  score *= harmonicPenalty;
+
+  return score;
+};
+
+const findBestLoop = (signatures) => {
+  const minLen = Math.max(12, Math.round(MIN_LOOP_SECONDS * PLAYBACK_FPS));
+  let maxLen = Math.min(
+    signatures.length - 1,
+    Math.round(MAX_LOOP_SECONDS * PLAYBACK_FPS)
+  );
+  if (maxLen < minLen) maxLen = minLen;
+
+  const maxStart = Math.min(
+    Math.round(PLAYBACK_FPS * 1.5),
+    Math.max(0, signatures.length - minLen - 2)
+  );
+
+  let best = { start: 0, length: minLen, score: Number.POSITIVE_INFINITY };
+
+  for (let start = 0; start <= maxStart; start += 1) {
+    for (let len = minLen; len <= maxLen; len += 1) {
+      const score = loopScoreAt(signatures, start, len);
+      if (score < best.score) {
+        best = { start, length: len, score };
+      }
+    }
+  }
+
+  return best;
 };
 
 const pickEvenly = (items, count) => {
@@ -112,54 +190,6 @@ const pickEvenly = (items, count) => {
   }
 
   return picked;
-};
-
-const findBestLoopLength = (signatures) => {
-  const minLen = Math.max(8, Math.round(MIN_LOOP_SECONDS * PLAYBACK_FPS));
-  let maxLen = Math.min(
-    signatures.length - 1,
-    Math.round(MAX_LOOP_SECONDS * PLAYBACK_FPS)
-  );
-  if (maxLen < minLen) maxLen = minLen;
-
-  let bestLen = minLen;
-  let bestScore = Number.POSITIVE_INFINITY;
-
-  for (let len = minLen; len <= maxLen; len += 1) {
-    let score = signatureDistance(signatures[0], signatures[len]);
-    let weight = 1;
-
-    const quarter = Math.floor(len / 4);
-    if (quarter > 0 && len + quarter < signatures.length) {
-      score += signatureDistance(signatures[quarter], signatures[len + quarter]);
-      weight += 1;
-    }
-
-    const half = Math.floor(len / 2);
-    if (half > 0 && len + half < signatures.length) {
-      score += signatureDistance(signatures[half], signatures[len + half]);
-      weight += 1;
-    }
-
-    const third = Math.floor(len / 3);
-    if (third > 0 && len + third < signatures.length) {
-      score += signatureDistance(signatures[third], signatures[len + third]);
-      weight += 1;
-    }
-
-    score /= weight;
-
-    // Prefer loops ~3s (calmo y cabe bien en GitHub)
-    const ideal = 3 * PLAYBACK_FPS;
-    score += Math.abs(len - ideal) * 0.015;
-
-    if (score < bestScore) {
-      bestScore = score;
-      bestLen = len;
-    }
-  }
-
-  return { loopLength: bestLen, loopScore: bestScore };
 };
 
 const cloneFrame = (frame) => ({
@@ -181,6 +211,8 @@ const blendFrames = (frameA, frameB, t) => {
   return { data: out, width: frameA.width, height: frameA.height };
 };
 
+const smoothstep = (t) => t * t * (3 - 2 * t);
+
 const applySeamlessCrossfade = (frames, fadeFrames) => {
   if (fadeFrames < 2 || frames.length <= fadeFrames) return frames;
 
@@ -188,13 +220,22 @@ const applySeamlessCrossfade = (frames, fadeFrames) => {
   const n = result.length;
 
   for (let i = 0; i < fadeFrames; i += 1) {
-    const t = (i + 1) / fadeFrames;
+    const t = smoothstep((i + 1) / fadeFrames);
     const tailIdx = n - fadeFrames + i;
-    const blended = blendFrames(result[tailIdx], result[i], t);
-    result[tailIdx] = blended;
+    result[tailIdx] = blendFrames(result[tailIdx], result[i], t);
   }
 
+  // Cierre exacto: último frame = primero (el GIF vuelve al frame 0 sin salto)
+  result[n - 1] = cloneFrame(result[0]);
+
   return result;
+};
+
+const sealLoop = (frames) => {
+  if (frames.length < 2) return frames;
+  const sealed = frames.map(cloneFrame);
+  sealed[sealed.length - 1] = cloneFrame(sealed[0]);
+  return sealed;
 };
 
 const buildPalette = (frames) => {
@@ -220,7 +261,7 @@ const encodeGif = (frames) => {
     gif.writeFrame(indexed, frame.width, frame.height, {
       palette,
       delay: delayMs,
-      dispose: 2,
+      dispose: 1,
       ...(index === 0 ? { repeat: 0 } : {}),
     });
   });
@@ -350,21 +391,28 @@ const main = async () => {
 
     const signatures = allFrames.map((frame) => frame.signature);
 
-    const { loopLength, loopScore } = findBestLoopLength(signatures);
-    let loopFrames = allFrames.slice(0, loopLength).map(cloneFrame);
+    const {
+      start: loopStart,
+      length: loopLength,
+      score: loopScore,
+    } = findBestLoop(signatures);
+    let loopFrames = allFrames
+      .slice(loopStart, loopStart + loopLength)
+      .map(cloneFrame);
 
     const fadeFrames = Math.max(
-      2,
+      18,
       Math.min(
         Math.round(loopLength * CROSSFADE_RATIO),
-        Math.floor(loopLength / 3)
+        Math.floor(loopLength / 2)
       )
     );
 
     log(
-      `  Bucle: ${loopLength}f (score ${loopScore.toFixed(2)}), crossfade ${fadeFrames}f`
+      `  Bucle: offset ${loopStart}f · ${loopLength}f (score ${loopScore.toFixed(2)}), crossfade ${fadeFrames}f`
     );
     loopFrames = applySeamlessCrossfade(loopFrames, fadeFrames);
+    loopFrames = sealLoop(loopFrames);
 
     trace("encode.start");
     const gif = encodeGif(loopFrames);
